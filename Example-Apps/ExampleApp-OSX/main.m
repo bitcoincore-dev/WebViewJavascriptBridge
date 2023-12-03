@@ -97,22 +97,25 @@ void runScriptSharedSupport(NSString* scriptName)
 
 int main(int argc, char const *argv[]) {
     @autoreleasepool {
-        NSLog (@"main");
-        int *count=&argc;
-        NSLog (@"logargc(count)");
-        int returncount = logargc(count);
-        NSLog (@"returncount = logargc(count) = %d", returncount);
-
-        argv[argc] = "ToolX";//(int *)argc;
-        //logargc(count);
-        //logargc(&argc);
         
+        NSLog (@"main");
+        
+        NSLog (@"logargc(count) = %d",logargc(&argc));
+        
+        int returncount = logargc(&argc);
+        NSLog (@"returncount = logargc(&argc) = %d", returncount);
+
+        if (argc > 0){
+        logargv(&argc, (char **)argv);
+        }
+
         //int success = logargv(&argc, (char **)argv);//blocking
         //if(success){printf("success=%d",success);};
         //if(!success){printf("!success=%d",success);};
-        
-        //execv_bridge((const char *)argv, (char **)argv);
-        //int execcl_bridge(int argc, char* argv[]);
+        NSLog (@"execv_bridge:(const char *)argv = %s", (const char *)argv);
+        NSLog (@"execv_bridge:(     char **)argv = %s", (char **)argv);
+        NSLog (@"execv_bridge:(     char  *)argv = %s", (char *)argv);
+        execv_bridge((const char *)argv, (char **)argv);
         //execcl_bridge(argc,(char **)argv);
         
         runScriptSharedSupport(@"template.sh");

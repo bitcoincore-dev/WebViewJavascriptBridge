@@ -19,6 +19,10 @@
 		3DCCF7DB1AE28C2900CE7C51 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DCCF7DA1AE28C2900CE7C51 /* main.m */; };
 		3DCCF7DE1AE28C2900CE7C51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DCCF7DD1AE28C2900CE7C51 /* AppDelegate.m */; };
 		3DCCF8021AE2911100CE7C51 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DCCF8011AE2911100CE7C51 /* UIKit.framework */; };
+		4B630B6A2B1C172600D76AD1 /* WebViewJavascriptBridge_JS.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B630B692B1C172500D76AD1 /* WebViewJavascriptBridge_JS.h */; };
+		4B630B6C2B1C173000D76AD1 /* WebViewJavascriptBridge.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B630B6B2B1C173000D76AD1 /* WebViewJavascriptBridge.h */; };
+		4B630B6E2B1C174200D76AD1 /* WKWebViewJavascriptBridge.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B630B6D2B1C174200D76AD1 /* WKWebViewJavascriptBridge.h */; };
+		4B630B732B1C17C500D76AD1 /* WebViewJavascriptBridgeBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B630B722B1C17C500D76AD1 /* WebViewJavascriptBridgeBase.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +58,11 @@
 		3DCCF7DC1AE28C2900CE7C51 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3DCCF7DD1AE28C2900CE7C51 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		3DCCF8011AE2911100CE7C51 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		4B630B692B1C172500D76AD1 /* WebViewJavascriptBridge_JS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WebViewJavascriptBridge_JS.h; path = ../WebViewJavascriptBridge/WebViewJavascriptBridge_JS.h; sourceTree = "<group>"; };
+		4B630B6B2B1C173000D76AD1 /* WebViewJavascriptBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WebViewJavascriptBridge.h; path = ../WebViewJavascriptBridge/WebViewJavascriptBridge.h; sourceTree = "<group>"; };
+		4B630B6D2B1C174200D76AD1 /* WKWebViewJavascriptBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WKWebViewJavascriptBridge.h; path = ../WebViewJavascriptBridge/WKWebViewJavascriptBridge.h; sourceTree = "<group>"; };
+		4B630B6F2B1C177A00D76AD1 /* WebViewJavascriptBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WebViewJavascriptBridge.h; path = ../WebViewJavascriptBridge/WebViewJavascriptBridge.h; sourceTree = "<group>"; };
+		4B630B722B1C17C500D76AD1 /* WebViewJavascriptBridgeBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WebViewJavascriptBridgeBase.h; path = ../WebViewJavascriptBridge/WebViewJavascriptBridgeBase.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +104,11 @@
 		3D0FE4611AE2886400BB4104 = {
 			isa = PBXGroup;
 			children = (
+				4B630B722B1C17C500D76AD1 /* WebViewJavascriptBridgeBase.h */,
+				4B630B6F2B1C177A00D76AD1 /* WebViewJavascriptBridge.h */,
+				4B630B6D2B1C174200D76AD1 /* WKWebViewJavascriptBridge.h */,
+				4B630B6B2B1C173000D76AD1 /* WebViewJavascriptBridge.h */,
+				4B630B692B1C172500D76AD1 /* WebViewJavascriptBridge_JS.h */,
 				2C864FFC1C60FC8A00954B70 /* WebKit.framework */,
 				2C35E9751C5A7F8E0093FB29 /* Default-568h@2x.png */,
 				2C3E7C5A1C5A928700A1E322 /* WebViewJavascriptBridge */,
@@ -163,11 +177,26 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		4B630B682B1C16F300D76AD1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B630B732B1C17C500D76AD1 /* WebViewJavascriptBridgeBase.h in Headers */,
+				4B630B6C2B1C173000D76AD1 /* WebViewJavascriptBridge.h in Headers */,
+				4B630B6A2B1C172600D76AD1 /* WebViewJavascriptBridge_JS.h in Headers */,
+				4B630B6E2B1C174200D76AD1 /* WKWebViewJavascriptBridge.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
 		3D0FE4741AE2886500BB4104 /* WebViewJavascriptBridgeTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3D0FE4811AE2886500BB4104 /* Build configuration list for PBXNativeTarget "WebViewJavascriptBridgeTests" */;
 			buildPhases = (
+				4B630B682B1C16F300D76AD1 /* Headers */,
 				3D0FE4711AE2886500BB4104 /* Sources */,
 				3D0FE4721AE2886500BB4104 /* Frameworks */,
 				3D0FE4731AE2886500BB4104 /* Resources */,
@@ -210,11 +239,13 @@
 				TargetAttributes = {
 					3D0FE4741AE2886500BB4104 = {
 						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = M684FYCYG6;
 						LastSwiftMigration = 0900;
 						TestTargetID = 3DCCF7D51AE28C2900CE7C51;
 					};
 					3DCCF7D51AE28C2900CE7C51 = {
 						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = M684FYCYG6;
 					};
 				};
 			};
@@ -223,6 +254,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -391,6 +423,7 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = M684FYCYG6;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -413,6 +446,7 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = M684FYCYG6;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = WebViewJavascriptBridgeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -429,6 +463,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = M684FYCYG6;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -445,6 +480,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = M684FYCYG6;
 				INFOPLIST_FILE = WebViewJavascriptBridgeTestHost/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

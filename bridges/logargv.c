@@ -1,26 +1,18 @@
-//
-//  logargv.c
-//  AppWithTool
-//
-//  Created by git on 5/18/23.
-//
-
+#ifndef __LOGARGV__
+#define __LOGARGV__
 #include "logargv.h"
 
 int logargv(int *count, char *argv[]){
 
-    printf("logargv:begin\n");
-    int argvlen = 0;
+    if(DEBUG){ printf("logargv:begin\n"); }
     int i = *count;
-    printf("while(argv[argvlen] != NULL):\n");
-    while(argv[argvlen] != NULL){
+    while(argv[*count-i] != NULL){
         while(argv[*count-i] != NULL){
-        printf("i=%d\n",i);
-        printf("%s\n", argv[*count-i]);
+        printf("%d:%s\n",i, argv[*count-i]);
         i--;
         }
-    printf("1.logargv:end\n");
     }
-    printf("2.logargv:end\n");
+    if(DEBUG){ printf("logargv:end\n"); }
     return 0;
 }
+#endif

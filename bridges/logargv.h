@@ -1,13 +1,6 @@
-//
-//  logargv.h
-//  AppWithTool
-//
-//  Created by git on 5/18/23.
-//
-
-#ifndef logargv_h
-#define logargv_h
+#ifndef __LOGARGV_H__
+#define __LOGARGV_H__
 #include <stdio.h>
 #include "async.h"
 int logargv(int *count, char *argv[]);
-#endif /* logargv_h */
+#endif

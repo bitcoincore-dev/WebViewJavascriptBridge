@@ -1,0 +1,9 @@
+.vs
+*.filters
+*.user
+Debug
+
+async/build
+.vscode
+
+**.DS_Store

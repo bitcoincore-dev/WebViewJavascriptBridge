@@ -186,18 +186,18 @@
 			isa = PBXGroup;
 			children = (
 				4BD698F42B1C3723008A273D /* logargv.h */,
-				4BD698F52B1C3723008A273D /* execcl_bridge.c */,
+				4BD698FC2B1C3723008A273D /* logargv.c */,
 				4BD698F62B1C3723008A273D /* template.sh */,
 				4BD698F72B1C3723008A273D /* Script.sh */,
 				4BD698F82B1C3723008A273D /* test.h */,
 				4BD698F92B1C3723008A273D /* logargc.h */,
+				4BD699002B1C3723008A273D /* logargc.c */,
+				4BD698FF2B1C3723008A273D /* execv_bridge.h */,
 				4BD698FA2B1C3723008A273D /* execv_bridge.c */,
 				4BD698FB2B1C3723008A273D /* execcl_bridge.h */,
-				4BD698FC2B1C3723008A273D /* logargv.c */,
+				4BD698F52B1C3723008A273D /* execcl_bridge.c */,
 				4BD698FD2B1C3723008A273D /* main.m */,
 				4BD698FE2B1C3723008A273D /* test.c */,
-				4BD698FF2B1C3723008A273D /* execv_bridge.h */,
-				4BD699002B1C3723008A273D /* logargc.c */,
 			);
 			name = bridges;
 			path = ../bridges;
@@ -249,6 +249,12 @@
 			attributes = {
 				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Marcus Westin";
+				TargetAttributes = {
+					2C136A2017641106004C7401 = {
+						DevelopmentTeam = M684FYCYG6;
+						ProvisioningStyle = Automatic;
+					};
+				};
 			};
 			buildConfigurationList = 2C136A1C17641106004C7401 /* Build configuration list for PBXProject "ExampleApp-OSX" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -399,13 +405,17 @@
 		2C136A3F17641106004C7401 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = M684FYCYG6;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ExampleApp-OSX/ExampleApp-OSX-Prefix.pch";
 				INFOPLIST_FILE = "ExampleApp-OSX/ExampleApp-OSX-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_BUNDLE_IDENTIFIER = "WebViewJavascriptBridge.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -413,13 +423,17 @@
 		2C136A4017641106004C7401 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = M684FYCYG6;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ExampleApp-OSX/ExampleApp-OSX-Prefix.pch";
 				INFOPLIST_FILE = "ExampleApp-OSX/ExampleApp-OSX-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_BUNDLE_IDENTIFIER = "WebViewJavascriptBridge.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
